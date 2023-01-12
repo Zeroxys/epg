@@ -3,12 +3,11 @@ import {css} from '@emotion/react'
 export const bannerStyles = () => {
   return {
     container : css`
-    height:300px;
-    border: 1px solid white;
+      padding:30px;
+       height:300px;
     `,
     contentWrapper: css`
-    width:500px;
-    border: 1px solid white;
+      width:500px;
     ` 
   }
 }

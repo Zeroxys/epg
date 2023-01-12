@@ -1,5 +1,9 @@
 import React, {useEffect} from 'react'
 import { modalStyles } from './styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faXmark
+} from '@fortawesome/free-solid-svg-icons'
 
 export const Modal = ({children, onRequestClose}) => {
   const styles = modalStyles()
@@ -7,16 +11,13 @@ export const Modal = ({children, onRequestClose}) => {
   useEffect(() => {
 		function onKeyDown(event) {
 			if (event.keyCode === 27) {
-				// Close the modal when the Escape key is pressed
 				onRequestClose();
 			}
 		}
 
-		// Prevent scolling
 		document.body.style.overflow = "hidden";
 		document.addEventListener("keydown", onKeyDown);
 
-		// Clear things up when unmounting this component
 		return () => {
 			document.body.style.overflow = "visible";
 			document.removeEventListener("keydown", onKeyDown);
@@ -26,6 +27,9 @@ export const Modal = ({children, onRequestClose}) => {
   return (
 		<div css={styles.modal_backdrop}>
 			<div css={styles.modal_container}>
+				<div css={styles.close_button}>
+					<FontAwesomeIcon icon={faXmark} size="2x" onClick={onRequestClose} />
+				</div>
         {children}
 			</div>
 		</div>

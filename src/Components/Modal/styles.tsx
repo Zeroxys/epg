@@ -19,6 +19,11 @@ export const modalStyles = () => {
       width: 100%;
       height: 100%;
       overflow: hidden;
+    `,
+    close_button : css`
+      padding:20px;
+      display:flex;
+      justify-content: flex-end;
     `
   }
 }
