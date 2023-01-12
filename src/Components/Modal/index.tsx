@@ -1,10 +1,7 @@
 import React, {useEffect} from 'react'
-import {css} from '@emotion/react'
-
 import { modalStyles } from './styles';
 
 export const Modal = ({children, onRequestClose}) => {
-
   const styles = modalStyles()
 
   useEffect(() => {
