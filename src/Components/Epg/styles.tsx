@@ -1,15 +1,16 @@
 import {css} from '@emotion/react'
 
-export const epgStyles = () => {
+export const epgStyles = (windowSize) => {
   return {
     tableScrollWrapper : css`
-     height: 60vh;
+     height: 50vh;
      overflow:auto;  
     ` ,
     wrapper : css`
     background: #8c54ff;
     `,
     modalTitle : css`
+      height:5vh;
       font-size: 22px;
       text-align: center;
       font-weight: 600;
@@ -18,37 +19,40 @@ export const epgStyles = () => {
     channel : css`
       display:flex;
       justify-content: flex-start;
-      width:95%;
     `,
     channelContainer : css`
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid white;
-      width: 500px;
+      width:500px;;
+      border:1px solid white;
     `,
     channelImage : css`
       width: 180px;
     `,
-    eventsWrapper : css`
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      width: 50%;
-      border:1px solid gray;
-    `,
+
     eventsHorizontalScroll : css`
+      width: ${windowSize[0] / 1.4}px;
       display: flex;
-      flex-direction: row;
-      // width: calc(100% - 600)px;
-      overflow:auto;
+      flex-wrap: no-wrap;
+      overflow-x: auto;
     `,
     events: css`
-      // display: flex;
-      // flex-direction: row;
-      // align-items:center;
+      display: flex;
+      flex-direction: row;
+      align-items:center;
       border:1px solid white;
-      // width : 280px;
+      width : 280px;
+    `,
+    eventStyle : css`
+      padding:30px;
+      display:flex;
+      flex-direction:column;
+    `,
+    eventTime : css`
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
     `
   }
 }

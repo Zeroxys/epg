@@ -4,7 +4,7 @@ export const bannerStyles = () => {
   return {
     container : css`
       padding:30px;
-       height:300px;
+       min-height:30vh;
     `,
     contentWrapper: css`
       width:500px;

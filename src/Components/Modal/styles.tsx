@@ -22,6 +22,7 @@ export const modalStyles = () => {
     `,
     close_button : css`
       padding:20px;
+      height:5vh;
       display:flex;
       justify-content: flex-end;
     `

@@ -6,9 +6,9 @@ const Button = ({onClick}) => {
   const { loading } = UseEpg()
   const styles = buttonStyles()
 
-  return (<div onClick={onClick} css={styles.wrapper}>
+  return (<button disabled={!loading} onClick={onClick} css={styles.wrapper}>
     <p>{loading ? 'Mostrar EPG' : 'Cargando...'}</p>
-  </div>)
+  </button>)
 }
 
 export default Button

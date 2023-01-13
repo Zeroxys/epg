@@ -10,7 +10,6 @@ export const buttonStyles = () => {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 30px;
     padding: 10px 15px;
     text-align:center;
     transition: transform 100ms ease-out;
